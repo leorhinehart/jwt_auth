@@ -28,7 +28,7 @@ class Users(db.Model):
             }
             return jwt.encode(
                 payload,
-                app.config.get('SECRET_KEY'),
+                app.config.get('SECRET_KEY'), # b'[V\x9f>\xb9\xc0\xc1\x1dw\xec\x88\x95Dg\x96`\xbeu\x06\xaf\x9f\xdb\xba$'
                 algorithm='HS256'
             )
         except Exception as e:
